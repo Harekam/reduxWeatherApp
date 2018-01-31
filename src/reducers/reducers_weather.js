@@ -1,6 +1,10 @@
+import { FETCH_WEATHER } from '../actions';
 // state argument is not application state
 // only the state this reducer is responsible for
-export default function (state = null, action) {
-    console.log("action received", action);
-    return state;
+export default function (state = [], action) {
+    switch (action.type) {
+        case FETCH_WEATHER:
+            return [action.payload.data, ...state];
+        default: return state;
+    }
 }

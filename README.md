@@ -1,1 +1,1 @@
-# Redux Book App
+# Redux Weather App
